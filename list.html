@@ -1,0 +1,56 @@
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+* {margin:0;padding:0;}
+ul,li {list-style:none;}
+ul > li {padding:5px 20px 5px 10px;}
+
+/* 가운데 정렬 소스/시작/이부분을 지우고 사용하세요 */
+ul {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+/* 가운데 정렬 소스/종료/ */
+
+.icon {
+	display:block;
+	width:auto;
+	position:relative;
+	line-height:30px;
+	padding-left:35px;
+	background:url('./img/icon.png') 0 0 / 60px no-repeat;
+	text-decoration:none;
+	font-family:'Noto Sans KR';
+	font-weight:700;
+	color:#333;
+}
+.icon::after {
+	content:'';
+	position:absolute;
+	z-index:1;
+	top:0;left:0;
+	width:0%;
+	height:100%;
+	background:url('./img/icon.png') 0 0 / 60px no-repeat;
+	transition:all .5s;
+}
+li:hover .icon::after {width:30px;}
+
+.icon01 {background-position:-30px 0;}
+.icon01::after {background-position:0 0;}
+.icon02 {background-position:-30px -30px;}
+.icon02::after {background-position:0 -30px;}
+.icon03 {background-position:-30px -60px;}
+.icon03::after {background-position:0 -60px;}
+.icon04 {background-position:-30px -90px;}
+.icon04::after {background-position:0 -90px;}
+.icon05 {background-position:-30px -120px;}
+.icon05::after {background-position:0 -120px;}
+.icon06 {background-position:-30px -150px;}
+.icon06::after {background-position:0 -150px;}
+</style>
+
+<ul>
+	<li><a class="icon icon01" href="#">샌드위치</a></li>
+	<li><a class="icon icon02" href="#">이용방법</a></li>
+	<li><a class="icon icon03" href="#">새소식</a></li>
+	<li><a class="icon icon04" href="#">써브웨이</a></li>
+	<li><a class="icon icon05" href="#">가맹점</a></li>
+	<li><a class="icon icon06" href="#">고객센터</a></li>
+</ul>
